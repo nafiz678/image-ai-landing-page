@@ -9,7 +9,7 @@ import Lottie, { RendererType } from "lottie-web";
 gsap.registerPlugin(ScrollTrigger);
 
 interface VarsProps {
-    target: HTMLElement; // Changed from number to HTMLElement
+    target: HTMLElement; 
     trigger?: string;
     start?: string;
     endTrigger?: string;
