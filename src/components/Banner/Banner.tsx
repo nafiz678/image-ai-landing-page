@@ -122,7 +122,7 @@ export default function Banner() {
 
             <section className="website-content">
                 <div className="end-lottie"></div>
-                <h1 className="text-7xl">Your Website Content Goes Here</h1>
+                <h1 className="text-7xl">Lorem ipsum dolor</h1>
                 <p className="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum delectus aperiam reiciendis, vero alias at? Aperiam illum asperiores nostrum quia, voluptatum rerum laboriosam sit impedit dicta repudiandae, obcaecati officiis?</p>
                 {/* Add more content to ensure scrollability */}
                 <div className="spacer"></div>
