@@ -9,7 +9,7 @@ import Lottie, { RendererType } from "lottie-web";
 gsap.registerPlugin(ScrollTrigger);
 
 interface VarsProps {
-    target: HTMLElement; 
+    target: HTMLElement;
     trigger?: string;
     start?: string;
     endTrigger?: string;
@@ -22,7 +22,7 @@ interface VarsProps {
         preserveAspectRatio: string;
         [key: string]: any;
     };
-    [key: string]: any; 
+    [key: string]: any;
 }
 
 interface StProps {
@@ -32,7 +32,7 @@ interface StProps {
     scrub: number;
     markers: boolean;
     endTrigger?: string;
-    [key: string]: any; 
+    [key: string]: any;
 }
 
 export default function Banner() {
@@ -52,7 +52,7 @@ export default function Banner() {
             markers: vars.markers || false,
         };
 
-        // Override with any additional provided properties
+
         for (const p in vars) {
             if (p !== "target" && p !== "path") {
                 st[p] = vars[p];
@@ -73,7 +73,7 @@ export default function Banner() {
 
         // Set up the ScrollTrigger once Lottie is loaded
         animation.addEventListener("DOMLoaded", function () {
-            // Create the animation tween
+
             gsap.to(playHead, {
                 frame: animation.totalFrames - 1,
                 ease: "none",
@@ -90,7 +90,7 @@ export default function Banner() {
 
     useEffect(() => {
         // Wait for component to be mounted 
-        if (!animationRef.current) {return;}
+        if (!animationRef.current) { return; }
 
         // Create the animation
         const animation = LottieScrollTrigger({
@@ -100,7 +100,7 @@ export default function Banner() {
             endTrigger: ".end-lottie",
             end: "bottom 20%", // End when bottom of end-trigger reaches 20% from top
             path: "/hero-lottie.json", // Use absolute path from public folder
-            scrub: 0.5, // Smoother scrubbing effect
+            scrub: 0.8, // Smoother scrubbing effect
             markers: true, // Enable markers for debugging
         });
 
@@ -122,15 +122,10 @@ export default function Banner() {
 
             <section className="website-content">
                 <div className="end-lottie"></div>
-                <h1>Your Website Content Goes Here</h1>
+                <h1 className="text-7xl">Your Website Content Goes Here</h1>
                 <p className="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum delectus aperiam reiciendis, vero alias at? Aperiam illum asperiores nostrum quia, voluptatum rerum laboriosam sit impedit dicta repudiandae, obcaecati officiis?</p>
                 {/* Add more content to ensure scrollability */}
                 <div className="spacer"></div>
-                <p className="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum delectus aperiam reiciendis, vero alias at? Aperiam illum asperiores nostrum quia, voluptatum rerum laboriosam sit impedit dicta repudiandae, obcaecati officiis?</p>
-                <p className="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum delectus aperiam reiciendis, vero alias at? Aperiam illum asperiores nostrum quia, voluptatum rerum laboriosam sit impedit dicta repudiandae, obcaecati officiis?</p>
-                <div className="spacer"></div>
-                <h2>Another Section</h2>
-                <p className="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum delectus aperiam reiciendis, vero alias at? Aperiam illum asperiores nostrum quia, voluptatum rerum laboriosam sit impedit dicta repudiandae, obcaecati officiis?</p>
             </section>
         </div>
     )

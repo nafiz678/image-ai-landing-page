@@ -15,7 +15,7 @@ export default function useLocoScroll(start: boolean) {
   useEffect(() => {
     if (!start) {return} // If not ready, don't initialize
 
-    const scrollEl = document.querySelector("#main");
+    const scrollEl = document.querySelector("#main") as HTMLElement;
     if (!scrollEl) {return;}
 
     const locoScroll = new LocomotiveScroll({
