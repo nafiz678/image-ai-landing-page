@@ -10,7 +10,7 @@ body {
 
 h1 {
   margin: 0.25em 0;
-  font-size: 80px ;
+  /* font-size: 80px ; */
   font-weight: 500;
   letter-spacing: -0.02em;
 }
@@ -89,6 +89,12 @@ nav a {
   background: #000;
   color: #fff;
   z-index: 1;
+}
+
+.gained-bg{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  opacity: 0.08;
+  animation: animateGrain 8s steps(10) infinite;
 }
 
 .end-lottie {

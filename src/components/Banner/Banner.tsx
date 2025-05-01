@@ -5,6 +5,7 @@ import "./banner.css"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lottie, { RendererType } from "lottie-web";
+import { VelocityScroll } from "../magicui/scroll-based-velocity";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -121,11 +122,15 @@ export default function Banner() {
             <section className="gradient"></section>
 
             <section className="website-content">
-                <div className="end-lottie"></div>
-                <h1 className="text-7xl">Lorem ipsum dolor</h1>
-                <p className="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laborum delectus aperiam reiciendis, vero alias at? Aperiam illum asperiores nostrum quia, voluptatum rerum laboriosam sit impedit dicta repudiandae, obcaecati officiis?</p>
-                {/* Add more content to ensure scrollability */}
-                <div className="spacer"></div>
+                <div className="end-lottie "></div>
+                <VelocityScroll className="text-[14vw] font-bold tracking-tight leading-none text-[#fffffff5] pb-64">
+                      Imagine Beyond &nbsp;&nbsp;&nbsp;
+                </VelocityScroll>
+                {/* <div className="h-screen"></div> */}
+                <p className="text-[4vw] font-[Inter] font-light text-white mt-96 tracking-tighter leading-[1.25]"><span className="mr-[8em] text-base tracking-normal font-normal inline-block ">This pixn AI</span>
+                    The future of visual creativity. Our AI is built to transform your ideas into breathtaking visuals — from hyper-realistic images to cinematic frames. Whether you're an artist, creator, or brand, unlock limitless possibilities with next-gen image generation. Video support is coming soon — and it’s going to be revolutionary.
+                </p>
+
             </section>
         </div>
     )

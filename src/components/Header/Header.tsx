@@ -164,18 +164,19 @@ const Header = () => {
 
     return (
         <section id="grain-container" className="bg-[#000]">
-            <div className="nav">
-                <div className="item-left">
+            <div className="nav mix-blend-difference fixed top-0 left-0 w-full flex justify-between px-6 py-4 z-50">
+                <div className="item-left flex gap-4 text-white">
                     <a href="#">chats</a>
                     <a href="#">playground</a>
                 </div>
-                <div className="item-right">
+                <div className="item-right flex gap-4 text-white">
                     <a href="https://nikolaire.com" target="_blank">visit us</a>
                     <a href="#">contact</a>
                 </div>
             </div>
+
             <div id="heading" className="logo-container">
-                <h1 id="pixn" className="logo px-[1em] pb-[1em] pt-[0.85em] text-white drop-shadow-[0_0_2px_rgba(255,255,255,1)] ">
+                <h1 id="pixn" className="logo px-[1em] pb-[1em] pt-[0.85em] text-white drop-shadow-[0_0_2px_rgba(255,255,255,1)] text-[2.2em]">
                     PIXN
                 </h1>
 
