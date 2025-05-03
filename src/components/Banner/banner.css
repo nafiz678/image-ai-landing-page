@@ -1,16 +1,16 @@
 body {
   width: 100%;
   height: 500vh;
-  background: #000;
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   margin: 0.25em 0;
-  /* font-size: 80px ; */
   font-weight: 500;
   letter-spacing: -0.02em;
 }
@@ -30,6 +30,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 .links {
@@ -59,7 +60,6 @@ nav a {
 
 .animation:after {
   content: "";
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
   width: 200%;
   height: 200%;
   position: fixed;
@@ -71,7 +71,7 @@ nav a {
 
 .gradient {
   width: 100vw;
-  height: 200vh;
+  height: 210vh;
   position: relative;
   background: linear-gradient(
     180deg,
@@ -84,17 +84,12 @@ nav a {
 .website-content {
   position: relative;
   width: 100%;
-  height: 300vh;
+  height: 210vh;
   padding: 2em;
-  background: #000;
+  background-color: #000;
   color: #fff;
   z-index: 1;
-}
-
-.gained-bg{
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
-  opacity: 0.08;
-  animation: animateGrain 8s steps(10) infinite;
+  box-sizing: border-box;
 }
 
 .end-lottie {
@@ -102,6 +97,60 @@ nav a {
   top: 100vh;
   width: 100%;
   height: 1px;
+}
+
+/* Headline text styles */
+.headline-text {
+  font-size: 14vw;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fffffff5;
+  padding-bottom: 64px;
+}
+
+
+.description-container {
+  margin-top: 596px;
+}
+
+.company-label {
+  margin-right: 8em;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: normal;
+  display: inline-block;
+}
+
+.description-text {
+  font-size: 4vw;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  margin-top: 32px;
+}
+
+/* Mobile specific styles */
+.mobile-headline {
+  font-size: 18vw;
+  padding-bottom: 32px;
+}
+
+.mobile-description {
+  margin-top: 348px;
+}
+
+.mobile-description .company-label {
+  margin-right: 0;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.mobile-description .description-text {
+  font-size: 6vw;
+  line-height: 1.4;
 }
 
 @keyframes animateGrain {
@@ -141,82 +190,57 @@ nav a {
   }
 }
 
-/* .app-container {
-    width: 100%;
-    min-height: 100vh;
-  } */
-/*
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .website-content {
+    padding: 1.5em;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 160%;
+  }
+  
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #f8f8f8;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 1em;
   }
   
   .logo a {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
+    font-size: 22px;
   }
   
   .links {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .links a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  
-  
-  /* Important: Set height for animation container */
-/*
-  .lottie-container {
-    width: 100%;
-    height: 80vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-  }
-  
-  .animation {
-    width: 100%;
-    height: 100%;
-    max-width: 800px;
+    gap: 1em;
   }
   
   .gradient {
-    height: 100px;
-    background: linear-gradient(
-      to bottom,
-      #f0f0f0,
-      transparent
-    );
+    height: 180vh;
   }
-  
+}
+
+@media (max-width: 480px) {
   .website-content {
-    padding: 40px;
-    min-height: 100vh; 
+    padding: 1em;
   }
   
-  .end-lottie {
-    height: 1px; 
+  p {
+    font-size: 16px;
+    line-height: 150%;
   }
   
-  .loremText {
-    margin-bottom: 20px;
-    line-height: 1.6;
+  .description-text {
+    font-size: 7vw;
   }
   
-  .spacer {
-    height: 40vh; 
+  .company-label {
+    font-size: 14px;
   }
-  /* Create space for scrolling */
+  
+  nav {
+    padding: 0.75em;
+  }
+  
+  .logo a {
+    font-size: 20px;
+  }
+}

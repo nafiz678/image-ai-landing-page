@@ -128,3 +128,222 @@ h1 {
     bottom: 20%;
     z-index: 20;
 }
+
+
+/* Tablet breakpoint */
+@media screen and (max-width: 1024px) {
+    .nav {
+        padding: 0 2em;
+    }
+    
+    .logo {
+        font-size: 1.8em;
+    }
+    
+    #ig1 {
+        width: 25%;
+        right: 20%;
+    }
+    
+    #ig2 {
+        width: 25%;
+        left: 18%;
+    }
+    
+    #ig3 {
+        width: 18%;
+    }
+    
+    #ig4 {
+        width: 26%;
+        top: 14%;
+    }
+    
+    #ig5 {
+        width: 28%;
+    }
+    
+    #ig6 {
+        width: 20%;
+        right: 25%;
+    }
+    
+    #ig7 {
+        width: 20%;
+    }
+    
+    #ig8 {
+        width: 30%;
+    }
+    
+    #ig9 {
+        width: 26%;
+    }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 0 1em;
+        height: 70px;
+    }
+    
+    a {
+        padding: 0 0.5em;
+        font-size: 10px;
+    }
+    
+    .logo {
+        font-size: 1.5em;
+    }
+    
+    /* Adjust image positions and sizes for mobile */
+    #ig1 {
+        width: 40%;
+        right: 10%;
+        bottom: 15%;
+    }
+    
+    #ig2 {
+        width: 38%;
+        left: 8%;
+        bottom: 30%;
+    }
+    
+    #ig3 {
+        top: 15%;
+        width: 30%;
+        left: 15%; 
+    }
+    
+    #ig4 {
+        width: 35%;
+        top: 18%;
+        left: 50%;
+    }
+    
+    #ig5 {
+        width: 40%;
+        bottom: 8%;
+        left: 33%;
+    }
+    
+    #ig6 {
+        width: 32%;
+        right: 15%;
+        top: 18%;
+    }
+    
+    #ig7 {
+        width: 30%;
+        bottom: 25%;
+        left: 5%;
+    }
+    
+    #ig8 {
+        width: 35%;
+        right: 3%;
+        bottom: 35%;
+    }
+    
+    #ig9 {
+        width: 32%;
+        left: 3%;
+        bottom: 40%;
+    }
+}
+
+/* Small mobile breakpoint */
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 0 0.5em;
+        height: 60px;
+    }
+    
+    .item-left, .item-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3em;
+    }
+    
+    .item-right {
+        align-items: flex-end;
+    }
+    
+    a {
+        padding: 0;
+        font-size: 9px;
+    }
+    
+    .logo {
+        font-size: 1.2em;
+    }
+    
+    /* Further adjust image positions for smaller screens */
+    #ig1 {
+        width: 45%;
+        right: 5%;
+        bottom: 20%;
+    }
+    
+    #ig2 {
+        width: 45%;
+        left: 5%;
+        bottom: 35%;
+    }
+    
+    #ig3 {
+        top: 15%;
+        width: 35%;
+        left: 8%;
+    }
+    
+    #ig4 {
+        width: 42%;
+        top: 18%;
+        left: 45%;
+    }
+    
+    #ig5 {
+        width: 50%;
+        bottom: 8%;
+        left: 25%;
+    }
+    
+    #ig6 {
+        width: 38%;
+        right: 8%;
+        top: 18%;
+    }
+    
+    #ig7 {
+        width: 35%;
+        bottom: 25%;
+        left: 2%;
+    }
+    
+    #ig8 {
+        width: 40%;
+        right: 2%;
+        bottom: 40%;
+    }
+    
+    #ig9 {
+        width: 38%;
+        left: 2%;
+        bottom: 45%;
+    }
+}
+
+/* Fix for very small devices */
+@media screen and (max-width: 320px) {
+    .logo {
+        font-size: 1em;
+    }
+    
+    /* Handle extremely small screens */
+    #page1 > img {
+        width: 50%;
+    }
+}

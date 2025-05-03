@@ -15,6 +15,18 @@
 
 body{
     background: #000;
-    /* overflow-x: hidden; */
-    
+    overflow-x: hidden;
+}
+
+body:after {
+    content: "";
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    width: 200%;
+    height: 200%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+    animation: animateGrain 10s steps(10) infinite;
+    z-index: 4;
 }
