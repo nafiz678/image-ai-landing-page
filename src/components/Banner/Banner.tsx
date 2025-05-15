@@ -124,8 +124,8 @@ export default function Banner() {
     }, []);
 
     return (
-        <div className="appContainer">
-            <section className="lottie-container">
+        <div className="appContainer"> 
+            <section className="lottie-container md:w-full w-11/12 mx-auto">
                 <div className="animation" ref={animationRef}></div>
             </section>
 
